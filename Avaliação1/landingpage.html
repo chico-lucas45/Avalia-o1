@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "utf-8">
+        <link rel = "stylesheet" href="C:\Users\lucar\Desktop\Faculdade\WebDev\Avaliação1\style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+		<title> Chempunk Studios </title>
+	</head>
+	
+	<body>
+		<section class="Slideshow">
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 4</div>
+                <img src="Assets/chempunk4.png" style="width:100%">
+                <div class="text">CHEMPUNK STUDIOS!</div>
+              </div>
+            
+              <div class="mySlides fade">
+                <div class="numbertext">2 / 4</div>
+                <img src="Assets/chempunk1.png" style="width:100%">
+                <div class="text">Criatividade na veia!</div>
+              </div>
+
+              <div class="mySlides fade">
+                <div class="numbertext">3 / 4</div>
+                <img src="Assets/chempunk3.jpg" style="width:100%">
+                <div class="text">Jogos para todos!</div>
+              </div>
+
+              <div class="mySlides fade">
+                <div class="numbertext">4 / 4</div>
+                <img src="Assets/chempunk2.jpg" style="width:100%">
+                <div class="text">Jogue! Explore! Divirta-se!</div>
+              </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </section>
+
+        <section class="chempunk">
+            <div class="chemtitulo">
+                <h2>O que é Chempunk Studios?</h2>
+            </div>
+                
+            <div class="chemsub">
+                <h3>Somos um estudio de desenvolvimento de jogos independentes onde o jogador é o foco. Aqui, criatividade e inovação são a chave.</h3>
+            </div>
+        </section>
+        <section class="sobreformulario">
+            <section class="Sobre">
+                <div class="icones">
+                    <div class="icon1">
+                        <img src="Assets\icon1.png" alt="icone1" style="width: 10%;"> 
+                    </div>
+
+                    <div class="icon2">
+                        <img src="Assets\icon2.png" alt="icone2" style="width: 10%;"> 
+                    </div>
+
+                    <div class="icon3">
+                        <img src="Assets\icon3.png" alt="icone3" style="width: 10%;"> 
+                    </div>
+                </div>
+
+                <div class="textsobre">
+                    <div class="text1">
+                        <h5>Nós trabalhamos arduamente para trazer experiências divertidas e profundas.</h5>
+                    </div>
+
+                    <div class="text2">
+                        <h5>Cada mundo que criamos é especial. Explore e se aventure!</h5>
+                    </div>
+
+                    <div class="text3">
+                        <h5>Somos jogadores também! Nossa missão é criar jogos que gostariamos de jogar.</h5>
+                    </div>
+                </div>
+            </section>
+
+            <section class="formulario">
+                <div class="preform">
+                    <h3>Interessado em trabalhar conosco?! </h3>
+                    <h4>Preencha o formulario a seguir e vamos considerar sua vaga!</h4>
+                </div>
+                <div class="caixas">
+
+                    <label>Nome completo</label>
+                    <input type="text" />
+
+                    <label>Posição</label>
+                    <input type="text"/>
+
+                    <label>Telefone</label>
+                    <input type="text" />
+                    
+                </div>
+                <div class="containerbotao">
+                    <button> Enviar</button>
+                </div>
+
+            </section>
+        </section>
+
+        <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {slideIndex = 1}
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";
+                dots[slideIndex-1].className += " active";
+            }
+
+
+        </script>
+	</body>
+</html>
